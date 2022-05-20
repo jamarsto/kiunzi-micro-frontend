@@ -3,5 +3,37 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-  }
+    "kiunzi-micro-frontend": {
+      "projectType": "library",
+      "root": "projects/kiunzi-micro-frontend",
+      "sourceRoot": "projects/kiunzi-micro-frontend/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "project": "projects/kiunzi-micro-frontend/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/kiunzi-micro-frontend/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/kiunzi-micro-frontend/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/kiunzi-micro-frontend/src/test.ts",
+            "tsConfig": "projects/kiunzi-micro-frontend/tsconfig.spec.json",
+            "karmaConfig": "projects/kiunzi-micro-frontend/karma.conf.js"
+          }
+        }
+      }
+    }
+  },
+  "defaultProject": "kiunzi-micro-frontend"
 }
