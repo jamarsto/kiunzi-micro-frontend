@@ -1,6 +1,21 @@
 {
     "name": "kiunzi-micro-frontend",
     "version": "0.0.1",
+    "description": "Kiunzi framework Micro-frontend scaffolding",
+    "homepage": "https://github.com/jamarsto/kiunzi-micro-frontend",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/jamarsto/kiunzi-micro-frotnend.git"
+    },
+    "keywords": [
+        "angular",
+        "webpack",
+        "micro-frontend",
+        "custom-elements",
+        "microservices"
+    ],
+    "author": "Jason Marston <jason@jasonmarston.co.uk>",
+    "license": "MIT",
     "scripts": {
         "build": "tsc -p tsconfig.schematics.json",
         "postbuild": "copyfiles schematics/*/schema.json schematics/*/files/** schematics/collection.json ../../dist/kiunzi-micro-frontend/"
