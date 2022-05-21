@@ -1,27 +1,62 @@
-# KiunziMicroFrontend
+# Kiunzi Micro-frontend Tools
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.3.3.
+Kiunzi is a scaffolding framework for building microservice based applications.  The Kiunzi Micro-frontend Tools library provides support for Module Federation and Custom Elements to enable the development fully encapsulated micro-frontends
 
-## Development server
+## Table of Contents
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+- [Acknowledgement](#cknowledgement)
+- [Prerequisites](#prerequisistes)
+- [Installation](#installation)
+- [Getting Started](#getting-started)
+- [Development](#development)
+- [Contributing](#contributing)
+- [Support + Feedback](#support--feedback)
 
-## Code scaffolding
+## Acknowledgement
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+This package uses and is inspired by `@angular-architects/module-federation` and `@angular-architects/module-federation-tools` by [Manfred Steyer](https://twitter.com/ManfredStayer). There were a few areas that I felt could be expanded and improved on, and I also thought that more could be done with schematics to get a full implementation up ang running without multiple tweaks to the generated code.
 
-## Build
+## Prerequisites
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+- Module Federation requires Webpack 5+
+- Angular's support of Webpack 5 requires Angular 12+
 
-## Running unit tests
+## Installation
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+This library is intended to be used at the start of establishing a project as it updates configurations and generates additional code and configurations.  In short it builds the scaffolding.
 
-## Running end-to-end tests
+```sh
+# Create your angular workspace
+ng new micro-frontend-workspace --create-application false
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+# Navigate into the micro-frontend-workspace folder
+cd micro-frontend-workspace
 
-## Further help
+# Create the shell
+ng generate application --no-routing --style sass --project shell
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+# Create the micro-frontends
+ng generate application --no-routing --style sass --project mfe1
+ng generate application --no-routing --style sass --project mfe2
+
+# Configure the shell
+ng add @jamarsto/kiunzi-micro-frontend-tools --project shell --type shell --port 8000
+
+# Configure the micro-frontends
+ng add @jamarsto/kiunzi-micro-frontend-tools --project mfe1 --type microfrontend --port 8001
+ng add @jamarsto/kiunzi-micro-frontend-tools --project mfe2 --type microfrontend --port 8002
+```
+
+:note: Note: This is still under development so will not update all configuration yet.  Upcoming releases will address this issue.
+
+## Getting Started
+
+## Development
+
+## Contributing
+
+## Support + Feedback
+
+## License
+
+This project is licensed under the MIT license.  See the [LICENSE](https://github.com/jamarsto/kiuni-micro-frondend)

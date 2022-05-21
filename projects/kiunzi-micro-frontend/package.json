@@ -1,11 +1,11 @@
 {
-    "name": "kiunzi-micro-frontend",
-    "version": "0.0.1",
+    "name": "@jamarsto/kiunzi-micro-frontend-tools",
+    "version": "0.0.19",
     "description": "Kiunzi framework Micro-frontend scaffolding",
     "homepage": "https://github.com/jamarsto/kiunzi-micro-frontend",
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/jamarsto/kiunzi-micro-frotnend.git"
+        "url": "git+https://github.com/jamarsto/kiunzi-micro-frontend.git"
     },
     "keywords": [
         "angular",
@@ -22,7 +22,10 @@
     },
     "schematics": "./schematics/collection.json",
     "ng-add": {
-        "save": "devDependencies"
+        "save": "dependencies"
+    },
+    "after-dependencies": {
+        "save": "dependencies"
     },
     "devDependencies": {
         "copyfiles": "file:../../node_modules/copyfiles",
@@ -30,7 +33,8 @@
     },
     "peerDependencies": {
         "@angular/common": "^13.3.0",
-        "@angular/core": "^13.3.0"
+        "@angular/core": "^13.3.0",
+        "@angular-architects/module-federation-tools": "^14.2.3"
     },
     "dependencies": {
         "tslib": "^2.3.0"

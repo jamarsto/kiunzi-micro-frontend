@@ -1,0 +1,43 @@
+{
+    "$schema": "http://json-schema.org/schema",
+    "$id": "KiunziMicroFrontendToolsNgAdd",
+    "title": "Adds a project to module federation and configures it as either a shell or micro-frontend",
+    "type": "object",
+    "properties": {
+        "project": {
+            "type": "string",
+            "description": "The project to add to module federation",
+            "$default": {
+                "$source": "argv",
+                "index": 0
+            },
+            "x-prompt": "Project:"
+        },
+        "port": {
+            "type": "number",
+            "description": "The port to use for the federated module (remote, micro frontend, etc.)",
+            "x-prompt": {
+                "message": "Port to use:",
+                "type": "number"
+            },
+            "$default": {
+                "$source": "argv",
+                "index": 1
+            }
+        },
+        "type": {
+            "type": "string",
+            "description": "The type of the module (Micro-frontend or Shell)",
+            "enum": ["microfrontend", "shell"],
+            "x-prompt": {
+                "message": "Type of module (Micro-frontend or Shell)",
+                "type": "list",
+                "items": [
+                    { "value": "microfrontend", "label": "Micro-frontend" },
+                    { "value": "shell", "label": "Shell" }
+                ]
+            }
+        }
+    },
+    "required": ["project", "port", "type"]
+}

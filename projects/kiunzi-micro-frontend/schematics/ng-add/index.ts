@@ -1,9 +1,11 @@
 import { Rule, SchematicContext, Tree } from '@angular-devkit/schematics';
-import { NodePackageInstallTask } from '@angular-devkit/schematics/tasks';
+import { NodePackageInstallTask, RunSchematicTask } from '@angular-devkit/schematics/tasks';
+import { Schema as KiunziNgAddSchema } from './schema';
 
-export function ngAdd(): Rule {
+export function ngAdd(options: KiunziNgAddSchema): Rule {
   return (tree: Tree, context: SchematicContext) => {
-    context.addTask(new NodePackageInstallTask());
+    const installTaskId = context.addTask(new NodePackageInstallTask());
+    context.addTask(new RunSchematicTask('after-dependencies', options), [installTaskId]);
     return tree;
   };
 }
