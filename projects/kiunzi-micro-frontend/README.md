@@ -13,7 +13,7 @@ Kiunzi is a scaffolding framework for building microservice based applications. 
 
 ## Acknowledgement
 
-This package uses and is inspired by `@angular-architects/module-federation` and `@angular-architects/module-federation-tools` by [Manfred Steyer](https://twitter.com/ManfredStayer). There were a few areas that I felt could be expanded and improved on, and I also thought that more could be done with schematics to get a full implementation up ang running without multiple tweaks to the generated code.
+This package uses and is inspired by `@angular-architects/module-federation` and `@angular-architects/module-federation-tools` by [Manfred Steyer](https://twitter.com/ManfredStayer). There were a few areas that I felt could be expanded and improved on, and I also thought that more could be done with schematics to get a full implementation up and running without multiple tweaks to the generated code.
 
 ## Prerequisites
 
@@ -50,7 +50,7 @@ ng add @jamarsto/kiunzi-micro-frontend-tools --project mfe2 --type microfrontend
 
 ## Getting Started
 
-:notetriangular_flag_on_post:Coming soon
+:triangular_flag_on_post:Coming soon
 
 ## Development
 
