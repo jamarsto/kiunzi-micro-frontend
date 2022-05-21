@@ -1,24 +1,62 @@
-# KiunziMicroFrontend
+# Kiunzi Micro-frontend Tools
 
-This library was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.3.0.
+Kiunzi is a scaffolding framework for building microservice based applications.  The Kiunzi Micro-frontend Tools library provides support for Module Federation and Custom Elements to enable the development fully encapsulated micro-frontends
 
-## Code scaffolding
+## Table of Contents
 
-Run `ng generate component component-name --project kiunzi-micro-frontend` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module --project kiunzi-micro-frontend`.
-> Note: Don't forget to add `--project kiunzi-micro-frontend` or else it will be added to the default project in your `angular.json` file. 
+- [Acknowledgement](#cknowledgement)
+- [Prerequisites](#prerequisistes)
+- [Installation](#installation)
+- [Getting Started](#getting-started)
+- [Development](#development)
+- [Contributing](#contributing)
+- [Support + Feedback](#support--feedback)
 
-## Build
+## Acknowledgement
 
-Run `ng build kiunzi-micro-frontend` to build the project. The build artifacts will be stored in the `dist/` directory.
+This package uses and is inspired by `@angular-architects/module-federation` and `@angular-architects/module-federation-tools` by [Manfred Steyer](https://twitter.com/ManfredStayer). There were a few areas that I felt could be expanded and improved on, and I also thought that more could be done with schematics to get a full implementation up ang running without multiple tweaks to the generated code.
 
-## Publishing
+## Prerequisites
 
-After building your library with `ng build kiunzi-micro-frontend`, go to the dist folder `cd dist/kiunzi-micro-frontend` and run `npm publish`.
+- Module Federation requires Webpack 5+
+- Angular's support of Webpack 5 requires Angular 12+
 
-## Running unit tests
+## Installation
 
-Run `ng test kiunzi-micro-frontend` to execute the unit tests via [Karma](https://karma-runner.github.io).
+This library is intended to be used at the start of establishing a project as it updates configurations and generates additional code and configurations.  In short it builds the scaffolding.
 
-## Further help
+```sh
+# Create your angular workspace
+ng new micro-frontend-workspace --create-application false
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+# Navigate into the micro-frontend-workspace folder
+cd micro-frontend-workspace
+
+# Create the shell
+ng generate application --no-routing --style sass --project shell
+
+# Create the micro-frontends
+ng generate application --no-routing --style sass --project mfe1
+ng generate application --no-routing --style sass --project mfe2
+
+# Configure the shell
+ng add @jamarsto/kiunzi-micro-frontend-tools --project shell --type shell --port 8000
+
+# Configure the micro-frontends
+ng add @jamarsto/kiunzi-micro-frontend-tools --project mfe1 --type microfrontend --port 8001
+ng add @jamarsto/kiunzi-micro-frontend-tools --project mfe2 --type microfrontend --port 8002
+```
+
+:note: Note: This is still under development so will not update all configuration yet.  Upcoming releases will address this issue.
+
+## Getting Started
+
+## Development
+
+## Contributing
+
+## Support + Feedback
+
+## License
+
+This project is licensed under the MIT license.  See the [LICENSE](https://github.com/jamarsto/kiuni-micro-frondend)
