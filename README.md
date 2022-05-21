@@ -58,4 +58,4 @@ ng add @jamarsto/kiunzi-micro-frontend-tools --project mfe2 --type microfrontend
 
 ## License
 
-This project is licensed under the MIT license.  See the [LICENSE](https://github.com/jamarsto/kiuni-micro-frondendhttps://github.com/jamarsto/kiunzi-micro-frontend/blob/master/LICENSE)
+This project is licensed under the MIT license.  See the [LICENSE](gttps://github.com/jamarsto/kiunzi-micro-frontend/blob/master/LICENSE)
