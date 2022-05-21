@@ -47,15 +47,15 @@ ng add @jamarsto/kiunzi-micro-frontend-tools --project mfe1 --type microfrontend
 ng add @jamarsto/kiunzi-micro-frontend-tools --project mfe2 --type microfrontend --port 8002
 ```
 
-:note: Note: This is still under development so will not update all configuration yet.  Upcoming releases will address this issue.
+:notetriangular_flag_on_post:This is still under development so will not update all configuration yet.  Upcoming releases will address this issue.
 
 ## Getting Started
 
+:notetriangular_flag_on_post:Coming soon
+
 ## Development
 
-## Contributing
-
-## Support + Feedback
+:triangular_flag_on_post:Coming soon
 
 ## License
 
