@@ -4,7 +4,7 @@ Kiunzi is a scaffolding framework for building microservice based applications. 
 
 ## Table of Contents
 
-- [Acknowledgement](#cknowledgement)
+- [Acknowledgements](#cknowledgements)
 - [Motivation](#motivation)
 - [Prerequisites](#prerequisistes)
 - [Installation](#installation)
@@ -12,13 +12,13 @@ Kiunzi is a scaffolding framework for building microservice based applications. 
 - [Development](#development)
 - [License](#license)
 
-## 🎁 Acknowledgement
+## 🎁 Acknowledgements
 
 This package uses and is inspired by `@angular-architects/module-federation` and `@angular-architects/module-federation-tools` by [Manfred Steyer](https://twitter.com/ManfredStayer).
 
 ## 🤔 Motivation
 
-There were a few in the angular architects packages that I felt could be expanded and improved on, and I also thought that more could be done with schematics to get a full implementation up and running without multiple tweaks to the generated code.
+There were a few things in the angular architects packages that I felt could be expanded and improved on, and I also thought that more could be done with schematics to get a full implementation up and running without multiple tweaks to the generated code.
 
 The key motivation is to simplify adoption of micro-frontends.
 
@@ -26,6 +26,7 @@ The key motivation is to simplify adoption of micro-frontends.
 
 - Module Federation requires Webpack 5+
 - Angular's support of Webpack 5 requires Angular 12+
+- This library is built using Angular 13+
 
 ## 📦 Installation
 
