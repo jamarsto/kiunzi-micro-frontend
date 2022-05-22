@@ -51,22 +51,18 @@ ng add @jamarsto/kiunzi-micro-frontend-tools --project shell --type shell --port
 # Configure the micro-frontends
 ng add @jamarsto/kiunzi-micro-frontend-tools --project mfe1 --type microfrontend --port 8001
 ng add @jamarsto/kiunzi-micro-frontend-tools --project mfe2 --type microfrontend --port 8002
-```
-<div class="text-white bg-blue mb-2">
-  .text-white on .bg-blue
-</div>
-<div class="text-white bg-blue mb-2">
-:information_source::triangular_flag_on_post:This is still under development so will not update all configuration yet.  Upcoming releases will address this issue.
-</div>
+
+:triangular_flag_on_post:This is still under development so will not update all configuration yet.  Upcoming releases will address this issue.
+
 
 ## :dvd: Getting Started
 
 
-:information_source::triangular_flag_on_post:Coming soon
+:triangular_flag_on_post:Coming soon
 
 ## Development
 
-:information_source::triangular_flag_on_post:Coming soon
+:triangular_flag_on_post:Coming soon
 
 ## License
 
