@@ -2,7 +2,7 @@
 
 Kiunzi is a scaffolding framework for building microservice based applications.  The Kiunzi Micro-frontend Tools library provides support for Module Federation and Custom Elements to enable the development fully encapsulated micro-frontends
 
-## Table of Contents
+## 🏠 Table of Contents
 
 - [Acknowledgements](#cknowledgements)
 - [Motivation](#motivation)
