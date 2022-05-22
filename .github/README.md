@@ -6,7 +6,7 @@ Kiunzi is a scaffolding framework for building microservice based applications. 
 
 - [Acknowledgements](#acknowledgements)
 - [Motivation](#motivation)
-- [Prerequisites](#prerequisistes)
+- [Prerequisites](#prerequisites)
 - [Installation](#installation)
 - [Getting Started](#getting-started)
 - [Development](#development)
