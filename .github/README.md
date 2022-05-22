@@ -1,10 +1,10 @@
-# Kiunzi Micro-frontend Tools
+# 🏠 Kiunzi Micro-frontend Tools
 
 Kiunzi is a scaffolding framework for building microservice based applications.  The Kiunzi Micro-frontend Tools library provides support for Module Federation and Custom Elements to enable the development fully encapsulated micro-frontends
 
 ## 🏠 Table of Contents
 
-- [Acknowledgements](#cknowledgements)
+- [Acknowledgements](#acknowledgements)
 - [Motivation](#motivation)
 - [Prerequisites](#prerequisistes)
 - [Installation](#installation)
@@ -12,23 +12,23 @@ Kiunzi is a scaffolding framework for building microservice based applications. 
 - [Development](#development)
 - [License](#license)
 
-## 🎁 Acknowledgements
+## 🎁Acknowledgements
 
 This package uses and is inspired by `@angular-architects/module-federation` and `@angular-architects/module-federation-tools` by [Manfred Steyer](https://twitter.com/ManfredStayer).
 
-## 🤔 Motivation
+## 🤔Motivation
 
 There were a few things in the angular architects packages that I felt could be expanded and improved on, and I also thought that more could be done with schematics to get a full implementation up and running without multiple tweaks to the generated code.
 
 The key motivation is to simplify adoption of micro-frontends.
 
-## 🔍 Prerequisites
+## 🔍Prerequisites
 
 - Module Federation requires Webpack 5+
 - Angular's support of Webpack 5 requires Angular 12+
 - This library is built using Angular 13+
 
-## 📦 Installation
+## 📦Installation
 
 This library is intended to be used at the start of establishing a project as it updates configurations and generates additional code and configurations.  In short it builds the scaffolding.
 
@@ -56,7 +56,7 @@ ng add @jamarsto/kiunzi-micro-frontend-tools --project mfe2 --type microfrontend
 
 🚩This is still under development so will not update all configuration yet.  Upcoming releases will address this issue.
 
-## 📀 Getting Started
+## 📀Getting Started
 
 🚩Coming soon
 
@@ -64,6 +64,6 @@ ng add @jamarsto/kiunzi-micro-frontend-tools --project mfe2 --type microfrontend
 
 🚩Coming soon
 
-## 📄 License
+## 📄License
 
 This project is licensed under the MIT license.  See the [LICENSE](https://github.com/jamarsto/kiunzi-micro-frontend/blob/master/LICENSE)
