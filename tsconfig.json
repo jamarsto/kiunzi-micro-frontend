@@ -9,9 +9,9 @@
     "noImplicitOverride": true,
     "noPropertyAccessFromIndexSignature": true,
     "paths": {
-      "kiunzi-micro-frontend": [
-        "dist/kiunzi-micro-frontend/kiunzi-micro-frontend",
-        "dist/kiunzi-micro-frontend"
+      "kiunzi-micro-frontend-tools": [
+        "dist/kiunzi-micro-frontend-tools/kiunzi-micro-frontend-tools",
+        "dist/kiunzi-micro-frontend-tools"
       ]
     },
     "noImplicitReturns": true,

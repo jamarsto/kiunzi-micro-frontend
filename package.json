@@ -1,5 +1,5 @@
 {
-    "name": "kiunzi-micro-frontend",
+    "name": "kiunzi-micro-frontend-tools",
     "version": "0.0.0",
     "scripts": {
         "ng": "ng",
@@ -7,8 +7,8 @@
         "build": "ng build",
         "watch": "ng build --watch --configuration development",
         "test": "ng test",
-        "npm:build": "cd ./projects/kiunzi-micro-frontend && npm run build ",
-        "npm:publish": "cd ./dist/kiunzi-micro-frontend && npm publish --public",
+        "npm:build": "cd ./projects/kiunzi-micro-frontend-tools && npm run build ",
+        "npm:publish": "cd ./dist/kiunzi-micro-frontend-tools && npm publish --public",
         "build:all": "npm run build && npm run npm:build && npm run npm:publish"
     },
     "private": true,

@@ -5,21 +5,21 @@
     "projects": {
         "kiunzi-micro-frontend": {
             "projectType": "library",
-            "root": "projects/kiunzi-micro-frontend",
-            "sourceRoot": "projects/kiunzi-micro-frontend/src",
+            "root": "projects/kiunzi-micro-frontend-tools",
+            "sourceRoot": "projects/kiunzi-micro-frontend-tools/src",
             "prefix": "lib",
             "architect": {
                 "build": {
                     "builder": "@angular-devkit/build-angular:ng-packagr",
                     "options": {
-                        "project": "projects/kiunzi-micro-frontend/ng-package.json"
+                        "project": "projects/kiunzi-micro-frontend-tools/ng-package.json"
                     },
                     "configurations": {
                         "production": {
-                            "tsConfig": "projects/kiunzi-micro-frontend/tsconfig.lib.prod.json"
+                            "tsConfig": "projects/kiunzi-micro-frontend-tools/tsconfig.lib.prod.json"
                         },
                         "development": {
-                            "tsConfig": "projects/kiunzi-micro-frontend/tsconfig.lib.json"
+                            "tsConfig": "projects/kiunzi-micro-frontend-tools/tsconfig.lib.json"
                         }
                     },
                     "defaultConfiguration": "production"
@@ -27,13 +27,13 @@
                 "test": {
                     "builder": "@angular-devkit/build-angular:karma",
                     "options": {
-                        "main": "projects/kiunzi-micro-frontend/src/test.ts",
-                        "tsConfig": "projects/kiunzi-micro-frontend/tsconfig.spec.json",
-                        "karmaConfig": "projects/kiunzi-micro-frontend/karma.conf.js"
+                        "main": "projects/kiunzi-micro-frontend-tools/src/test.ts",
+                        "tsConfig": "projects/kiunzi-micro-frontend-tools/tsconfig.spec.json",
+                        "karmaConfig": "projects/kiunzi-micro-frontend-tools/karma.conf.js"
                     }
                 }
             }
         }
     },
-    "defaultProject": "kiunzi-micro-frontend"
+    "defaultProject": "kiunzi-micro-frontend-tools"
 }
