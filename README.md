@@ -51,12 +51,11 @@ ng add @jamarsto/kiunzi-micro-frontend-tools --project shell --type shell --port
 # Configure the micro-frontends
 ng add @jamarsto/kiunzi-micro-frontend-tools --project mfe1 --type microfrontend --port 8001
 ng add @jamarsto/kiunzi-micro-frontend-tools --project mfe2 --type microfrontend --port 8002
+```
 
 :triangular_flag_on_post:This is still under development so will not update all configuration yet.  Upcoming releases will address this issue.
 
-
 ## :dvd: Getting Started
-
 
 :triangular_flag_on_post:Coming soon
 
