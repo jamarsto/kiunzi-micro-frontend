@@ -2,7 +2,7 @@
 
 Kiunzi is a scaffolding framework for building microservice based applications.  The Kiunzi Micro-frontend Tools library provides support for Module Federation and Custom Elements to enable the development fully encapsulated micro-frontends
 
-## 🏠 Table of Contents
+## 🏠Table of Contents
 
 - [Acknowledgements](#acknowledgements)
 - [Motivation](#motivation)
@@ -60,7 +60,7 @@ ng add @jamarsto/kiunzi-micro-frontend-tools --project mfe2 --type microfrontend
 
 🚩Coming soon
 
-## :building_construction: Development
+## 🏗️Development
 
 🚩Coming soon
 
