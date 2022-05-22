@@ -22,7 +22,7 @@ There were a few things in the angular architects packages that I felt could be 
 
 The key motivation is to simplify adoption of micro-frontends.
 
-## Prerequisites
+## 🔍 Prerequisites
 
 - Module Federation requires Webpack 5+
 - Angular's support of Webpack 5 requires Angular 12+
