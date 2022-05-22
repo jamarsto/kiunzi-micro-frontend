@@ -60,7 +60,7 @@ ng add @jamarsto/kiunzi-micro-frontend-tools --project mfe2 --type microfrontend
 
 🚩Coming soon
 
-## 🏗️Development
+## ✨Development
 
 🚩Coming soon
 
