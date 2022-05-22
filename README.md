@@ -12,7 +12,7 @@ Kiunzi is a scaffolding framework for building microservice based applications. 
 - [Development](#development)
 - [License](#license)
 
-## Acknowledgement
+## :gift: Acknowledgement
 
 This package uses and is inspired by `@angular-architects/module-federation` and `@angular-architects/module-federation-tools` by [Manfred Steyer](https://twitter.com/ManfredStayer).
 
@@ -60,10 +60,10 @@ ng add @jamarsto/kiunzi-micro-frontend-tools --project mfe2 --type microfrontend
 
 :triangular_flag_on_post:Coming soon
 
-## Development
+## :building_construction: Development
 
 :triangular_flag_on_post:Coming soon
 
-## License
+## :page_facing_up: License
 
 This project is licensed under the MIT license.  See the [LICENSE](https://github.com/jamarsto/kiunzi-micro-frontend/blob/master/LICENSE)
