@@ -7,7 +7,6 @@ export * from './lib/component/root/root.component';
 export * from './lib/component/unauthorised/unauthorised.component';
 export * from './lib/function/initialise-module-routes/initialise-module-routes.function';
 export * from './lib/function/initialise-shell-routes/initialise-shell-routes.function';
-export * from './lib/module/auth-config/auth-config.module';
 export * from './lib/module/micro-front-end/micro-front-end.module';
 export * from './lib/types/custom-module-routes/custom-module-routes.type';
 export * from './lib/types/custom-shell-routes/custom-shell-routes.type';
