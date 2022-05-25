@@ -34,7 +34,8 @@
     "peerDependencies": {
         "@angular/common": "^13.3.0",
         "@angular/core": "^13.3.0",
-        "@angular-architects/module-federation-tools": "^14.2.3"
+        "@angular-architects/module-federation-tools": "^14.2.3",
+        "angular-auth-oidc-client": "14.0.0"
     },
     "dependencies": {
         "tslib": "^2.3.0"
