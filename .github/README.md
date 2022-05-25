@@ -14,7 +14,7 @@ Kiunzi is a scaffolding framework for building microservice based applications. 
 
 ## 🎁Acknowledgements
 
-This package uses and is inspired by `@angular-architects/module-federation` and `@angular-architects/module-federation-tools` by [Manfred Steyer](https://twitter.com/ManfredStayer).
+This package uses and is inspired by `@angular-architects/module-federation` and `@angular-architects/module-federation-tools` by [Manfred Steyer](https://twitter.com/ManfredSteyer).
 
 ## 🤔Motivation
 
