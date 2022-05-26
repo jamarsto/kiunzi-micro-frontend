@@ -1,0 +1,9 @@
+.dropdown-item
+  color: lightgrey
+.dropdown-item.active, .dropdown-item:active
+  color: white
+  background-color: var(--bs-primary) !important
+
+.dropdown-item:hover, .dropdown-item:focus
+  color: white
+  background-color: var(--bs-info)

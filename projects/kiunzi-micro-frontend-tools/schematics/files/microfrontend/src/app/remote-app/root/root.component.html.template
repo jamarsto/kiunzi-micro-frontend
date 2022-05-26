@@ -1,0 +1,8 @@
+<article class="d-flex flex-column overflow-hidden min-vh-minus-header-and-footer vh-minus-header-and-footer">
+    <header class="container-fluid navbar-fixed-top ps-0 pe-0">
+        <header-component></header-component>
+    </header>
+    <main role="main" class="container-fluid flex-grow-1 overflow-auto bg-light ps-0 pe-0">
+        <router-outlet></router-outlet>
+    </main>
+</article>

@@ -7,11 +7,14 @@
         "project": {
             "type": "string",
             "description": "The project to add to module federation",
+            "x-prompt": {
+                "message": "Project:",
+                "type": "string"
+            },
             "$default": {
                 "$source": "argv",
                 "index": 0
-            },
-            "x-prompt": "Project:"
+            }
         },
         "port": {
             "type": "number",
@@ -30,14 +33,30 @@
             "description": "The type of the module (Micro-frontend or Shell)",
             "enum": ["microfrontend", "shell"],
             "x-prompt": {
-                "message": "Type of module (Micro-frontend or Shell)",
+                "message": "Type of module (Micro-frontend or Shell):",
                 "type": "list",
                 "items": [
                     { "value": "microfrontend", "label": "Micro-frontend" },
                     { "value": "shell", "label": "Shell" }
                 ]
+            },
+            "$default": {
+                "$source": "argv",
+                "index": 2
+            }
+        },
+        "library": {
+            "type": "string",
+            "description": "The shared library used by the project",
+            "x-prompt": {
+                "message": "Shared library to use:",
+                "type": "string"
+            },
+            "$default": {
+                "$source": "argv",
+                "index": 3
             }
         }
     },
-    "required": ["project", "port", "type"]
+    "required": ["project", "port", "type", "library"]
 }

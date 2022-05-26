@@ -1,0 +1,6 @@
+{
+    "menuItems": [
+        { "title": "Home", "link": "/", "fullMatch": true },
+        { "title": "Example", "link": "/example", "fullMatch": false }
+    ]
+}

@@ -1,0 +1,29 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <div class="container-fluid">
+        <a class="navbar-brand" [routerLink]="['']" (click)="isCollapsed = true">{{module.title}} Shell Simulator</a>
+        <button (click)="toggle()" class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" [attr.aria-expanded]="!isCollapsed" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" [ngbCollapse]="isCollapsed" id="navbarSupportedContent">
+            <ul ngbNav #nav="ngbNav" class="navbar-nav me-auto mb-2 mb-lg-0" [activeId]="'#'">
+                <ng-container *ngIf="module.items.length === 1">
+                    <ng-container *ngFor="let item of module.items">
+                        <li ngbNavItem>
+                            <a ngbNavLink routerLinkActive="active" [routerLinkActiveOptions]="{exact: item.fullMatch}" [routerLink]="[module.prefix + item.link]" (click)="collapse()">{{item.title}}</a>
+                        </li>
+                    </ng-container>
+                </ng-container>
+                <ng-container *ngIf="module.items.length > 1">
+                    <li ngbDropdown class="nav-item">
+                        <a href (click)="false" class="nav-link" ngbDropdownToggle [ngClass]="modulePathActiveClass('active',module.prefix)">{{module.title}}</a>
+                        <div ngbDropdownMenu class="bg-primary">
+                            <ng-container *ngFor="let item of module.items">
+                                <a ngbDropdownItem routerLinkActive="active" [routerLinkActiveOptions]="{exact: item.fullMatch}" [routerLink]="[module.prefix + item.link]" (click)="collapse()">{{item.title}}</a>
+                            </ng-container>
+                        </div>
+                    </li>
+                </ng-container>
+            </ul>
+        </div>
+    </div>
+</nav>
