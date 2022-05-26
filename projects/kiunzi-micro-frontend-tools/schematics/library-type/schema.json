@@ -1,0 +1,33 @@
+{
+    "$schema": "http://json-schema.org/schema",
+    "$id": "KiunziMicroFrontendToolsLibraryType",
+    "title": "Adds a project to module federation and configures it as either a shell or micro-frontend",
+    "type": "object",
+    "properties": {
+        "project": {
+            "type": "string",
+            "description": "The project to add to module federation",
+            "x-prompt": {
+                "message": "Enter the project name:",
+                "type": "string"
+            }
+        },
+        "authority": {
+            "type": "string",
+            "description": "The OIDC authority URL",
+            "x-prompt": {
+                "message": "Enter the OIDC authority URL",
+                "type": "string"
+            }
+        },
+        "client": {
+            "type": "string",
+            "description": "The client id",
+            "x-prompt": {
+                "message": "Enter the client id",
+                "type": "string"
+            }
+        }
+    },
+    "required": ["project", "authority", "client"]
+}

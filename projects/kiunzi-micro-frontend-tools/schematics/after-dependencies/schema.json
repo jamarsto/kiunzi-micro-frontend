@@ -1,0 +1,31 @@
+{
+    "$schema": "http://json-schema.org/schema",
+    "$id": "KiunziMicroFrontendToolsAfterDependencies",
+    "title": "Adds a project to module federation and configures it as either a shell or micro-frontend",
+    "type": "object",
+    "properties": {
+        "project": {
+            "type": "string",
+            "description": "The project to add to module federation",
+            "x-prompt": {
+                "message": "Enter the project name:",
+                "type": "string"
+            }
+        },
+        "type": {
+            "type": "string",
+            "description": "The type of the module (Micro-frontend, Shell, or Library)",
+            "enum": ["microfrontend", "shell", "library"],
+            "x-prompt": {
+                "message": "Enter the type of module (Micro-frontend, Shell, or Library):",
+                "type": "list",
+                "items": [
+                    { "value": "microfrontend", "label": "Micro-frontend" },
+                    { "value": "shell", "label": "Shell" },
+                    { "value": "library", "label": "Library" }
+                ]
+            }
+        }
+    },
+    "required": ["project", "type"]
+}

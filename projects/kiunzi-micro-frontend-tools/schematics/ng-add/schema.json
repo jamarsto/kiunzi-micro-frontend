@@ -8,55 +8,10 @@
             "type": "string",
             "description": "The project to add to module federation",
             "x-prompt": {
-                "message": "Project:",
+                "message": "Enter the project name:",
                 "type": "string"
-            },
-            "$default": {
-                "$source": "argv",
-                "index": 0
-            }
-        },
-        "port": {
-            "type": "number",
-            "description": "The port to use for the federated module (remote, micro frontend, etc.)",
-            "x-prompt": {
-                "message": "Port to use:",
-                "type": "number"
-            },
-            "$default": {
-                "$source": "argv",
-                "index": 1
-            }
-        },
-        "type": {
-            "type": "string",
-            "description": "The type of the module (Micro-frontend or Shell)",
-            "enum": ["microfrontend", "shell"],
-            "x-prompt": {
-                "message": "Type of module (Micro-frontend or Shell):",
-                "type": "list",
-                "items": [
-                    { "value": "microfrontend", "label": "Micro-frontend" },
-                    { "value": "shell", "label": "Shell" }
-                ]
-            },
-            "$default": {
-                "$source": "argv",
-                "index": 2
-            }
-        },
-        "library": {
-            "type": "string",
-            "description": "The shared library used by the project",
-            "x-prompt": {
-                "message": "Shared library to use:",
-                "type": "string"
-            },
-            "$default": {
-                "$source": "argv",
-                "index": 3
             }
         }
     },
-    "required": ["project", "port", "type", "library"]
+    "required": ["project"]
 }

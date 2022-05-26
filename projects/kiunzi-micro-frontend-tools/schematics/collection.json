@@ -2,14 +2,24 @@
     "$schema": "../../../node_modules/@angular-devkit/schematics/collection-schema.json",
     "schematics": {
         "ng-add": {
-            "description": "Add my library to the project.",
+            "description": "Add my library to the project",
             "factory": "./ng-add/index#ngAdd",
             "schema": "./ng-add/schema.json"
         },
         "after-dependencies": {
-            "description": "Add configurations after package installations",
+            "description": "Add configurations after package installation",
             "factory": "./after-dependencies/index#afterDependencies",
-            "schema": "./ng-add/schema.json"
+            "schema": "./after-dependencies/schema.json"
+        },
+        "application-type": {
+            "description": "Add configurations to application project",
+            "factory": "./application-type/index#applicationType",
+            "schema": "./application-type/schema.json"
+        },
+        "library-type": {
+            "description": "Add configurations to library project",
+            "factory": "./library-type/index#libraryType",
+            "schema": "./library-type/schema.json"
         }
     }
 }

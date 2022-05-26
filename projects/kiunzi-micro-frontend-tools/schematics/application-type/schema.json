@@ -1,0 +1,46 @@
+{
+    "$schema": "http://json-schema.org/schema",
+    "$id": "KiunziMicroFrontendToolsApplicationType",
+    "title": "Adds a project to module federation and configures it as either a shell or micro-frontend",
+    "type": "object",
+    "properties": {
+        "project": {
+            "type": "string",
+            "description": "The project to add to module federation",
+            "x-prompt": {
+                "message": "Enter the project name:",
+                "type": "string"
+            }
+        },
+        "type": {
+            "type": "string",
+            "description": "The type of the module (Micro-frontend, or Shell)",
+            "enum": ["microfrontend", "shell"],
+            "x-prompt": {
+                "message": "Enter the type of module (Micro-frontend, or Shell):",
+                "type": "list",
+                "items": [
+                    { "value": "microfrontend", "label": "Micro-frontend" },
+                    { "value": "shell", "label": "Shell" }
+                ]
+            }
+        },
+        "port": {
+            "type": "number",
+            "description": "The port number",
+            "x-prompt": {
+                "message": "Enter the port number:",
+                "type": "number"
+            }
+        },
+        "library": {
+            "type": "string",
+            "description": "The shared library",
+            "x-prompt": {
+                "message": "Enter the shared library name:",
+                "type": "string"
+            }
+        }
+    },
+    "required": ["project", "type", "port", "library"]
+}

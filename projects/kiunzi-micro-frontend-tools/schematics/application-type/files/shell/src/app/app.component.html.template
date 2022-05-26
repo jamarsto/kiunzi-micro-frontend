@@ -1,0 +1,11 @@
+<article class="d-flex flex-column overflow-hidden min-vh-100 vh-100">
+    <header class="container-fluid navbar-fixed-top ps-0 pe-0">
+        <header-component></header-component>
+    </header>
+    <main role="main" class="container-fluid flex-grow-1 overflow-auto bg-light ps-0 pe-0">
+        <router-outlet></router-outlet>
+    </main>
+    <footer class="container-fluid mt-auto ps-0 pe-0">
+        <footer-component></footer-component>
+    </footer>
+</article>
