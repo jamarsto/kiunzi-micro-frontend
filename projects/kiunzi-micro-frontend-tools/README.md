@@ -118,8 +118,7 @@ Update the `src/assets/menu.json` for each module to reflect routes we want to a
 {
     "menuItems": [
         { "title": "Home", "link": "/", "fullMatch": true },
-        { "title": "Path", "link": "/path", "fullMatch": false },
-        { "title": "Payment", "link": "/payment", "fullMatch": false }
+        { "title": "Example", "link": "/example", "fullMatch": false }
     ]
 }
 ```
