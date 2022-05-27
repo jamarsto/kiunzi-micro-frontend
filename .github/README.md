@@ -81,11 +81,81 @@ You may need to restart your ide for the `tsconfig.json` and `npm link` changes 
 
 ## 📀Getting Started
 
-🚩Coming soon.  Will contain instructions on Routing and navigation bars/menus.
+Update `projects/shell/src/app/app-routing.module.ts` to add the modules to the ``shell`` route
+```ts
+export const customShellRoutes: CustomShellRoutes = {
+	headRoutes: [
+		{ path: '', redirectTo: 'retail', pathMatch: 'full' },
+		{ path: 'unauthorized', component: UnauthorisedComponent }
+	],
+	moduleRoutes: [
+		{ title: 'Module One', name: 'mfe1', prefix: 'one', items: [], guards: [AutoLoginAllRoutesWithRoleGuard], roles: ['ADMIN', 'USER'] },
+		{ title: 'Module Two', name: 'mfe2', prefix: 'two', items: [], guards: [AutoLoginAllRoutesWithRoleGuard], roles: ['ADMIN', 'USER'] }
+	],
+	tailRoutes: [
+		{ path: '**', component: NotFoundComponent }
+	]
+}
+```
+
+Update the `src/app/remote-app/remote-app-routing.module.ts` for each module to reflect any new routing
+```ts
+const customRoutes: CustomModuleRoutes = {
+  headRoutes: [
+    { path: '', redirectTo: shellModule.prefix, pathMatch: 'full' },
+    { path: 'unauthorized', component: UnauthorisedComponent }
+  ],
+  moduleRoute: { component: RootComponent, guards: [AutoLoginAllRoutesWithRoleGuard], roles: ['ADMIN', 'USER'], children: [
+    { path: '', component: HomeComponent },
+    { path: 'example', component: ExampleComponent },
+  ]},
+  tailRoutes: []
+}
+```
+
+Update the `src/assets/menu.json` for each module to reflect routes we want to add to the `shell` navigation bar
+```json
+{
+    "menuItems": [
+        { "title": "Home", "link": "/", "fullMatch": true },
+        { "title": "Path", "link": "/path", "fullMatch": false },
+        { "title": "Payment", "link": "/payment", "fullMatch": false }
+    ]
+}
+```
 
 ## ✨Development
 
-🚩Coming soon
+The `shellModule` constant in each `src/app/remote-app/remote-app-routing.module.ts` is used to simulate the `shell` when testing the micro-frontend in standalone mode
+```ts
+export const shellModule: Module = {name: 'mfe1', title: 'Module One', prefix: 'one', items: jsonMenuItems.menuItems as MenuItems};
+```
+
+The navigation bar in the `projects/src/shell/app/component/header/header.component.ts` is dynamically generated using the `src/assets/menu.json` from each module
+```ts
+ngOnInit(): void {
+  this.modules.forEach((entry) => this
+      .menuItemService
+      .getMenuItemsForModule(entry.name)
+      .subscribe((children) => entry.items = children));
+}
+```
+
+To keep the routes from the `shell` and modules in sync Kiunzi uses events under the hood. To register the event handling we use `syncRouteShell.sync` in the `constructor` of `projects/shell/src/app/app.component.ts`
+
+```ts
+constructor(private router: Router, private syncRouteShell: SyncRouteShell) {
+  this.syncRouteShell.sync(this.router, customShellRoutes);
+}
+```
+
+and we use `syncRouteModule.sync` in `ngOnInit` of `src/app/remote-app/remote-app.component.ts` in each module
+
+```ts
+ngOnInit(): void {
+  this.syncRouteModule.sync(this.router, shellModule.name);
+}
+```
 
 ## 📄License
 
