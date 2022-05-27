@@ -18,7 +18,7 @@ This package uses and is inspired by `@angular-architects/module-federation` and
 
 ## 🤔Motivation
 
-There were a few in the angular architects packages that I felt could be expanded and improved on, and I also thought that more could be done with schematics to get a full implementation up and running without multiple tweaks to the generated code.
+There were a few things in the angular architects packages that I felt could be expanded and improved on, and I also thought that more could be done with schematics to get a full implementation up and running without multiple tweaks to the generated code.
 
 The key motivation is to simplify adoption of micro-frontends.
 
