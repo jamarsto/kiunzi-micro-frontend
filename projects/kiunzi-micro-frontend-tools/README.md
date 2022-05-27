@@ -24,9 +24,18 @@ The key motivation is to simplify adoption of micro-frontends.
 
 ## 🔍Prerequisites
 
+The general foundations:
 - Module Federation requires Webpack 5+
 - Angular's support of Webpack 5 requires Angular 12+
 - This library is built using Angular 13+
+
+Packages used and automatically added to the `package.json` of the angular workspace when Kiunzi is added.
+- `angular-oidc-auth-client`
+- `@angular-architects/module-federation`
+- `@angular-architects/module-federation-tools`
+- `@ng-bootstrap/ng-bootstrap`
+- `@popperjs/core`
+- `bootstrap`
 
 ## 📦Installation
 
