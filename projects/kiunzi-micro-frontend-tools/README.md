@@ -90,7 +90,7 @@ You may need to restart your ide for the `tsconfig.json` and `npm link` changes 
 
 ## 📀Getting Started
 
-Update `projects/shell/src/app/app-routing.module.ts` to add the modules to the ``shell`` route
+Update `projects/shell/src/app/app-routing.module.ts` to add the modules to ``customShellRoutes.moduleRoutes``
 ```ts
 export const customShellRoutes: CustomShellRoutes = {
 	headRoutes: [
@@ -107,7 +107,7 @@ export const customShellRoutes: CustomShellRoutes = {
 }
 ```
 
-Update the `src/app/remote-app/remote-app-routing.module.ts` for each module to reflect any new routing
+Update the `src/app/remote-app/remote-app-routing.module.ts` for each module to reflect the routing required within the module
 ```ts
 const customRoutes: CustomModuleRoutes = {
   headRoutes: [
@@ -131,6 +131,48 @@ Update the `src/assets/menu.json` for each module to reflect routes we want to a
     ]
 }
 ```
+
+Add a `proxy.conf.json` to the angular workspace, making sure the entries created match the modules created
+```json
+{
+    "/mfe/mfe1": {
+        "target": "http://localhost:8001",
+        "pathRewrite": {
+            "^/mfe/mfe1/": "/"
+        },
+        "secure": false,
+        "changeOrigin": true
+    },
+    "/mfe/mfe2": {
+        "target": "http://localhost:8002",
+        "pathRewrite": {
+            "^/mfe/mfe2/": "/"
+        },
+        "secure": false,
+        "changeOrigin": true
+    }
+}
+```
+
+Add `proxyConfig` to the `serve` section of the `shell` project in `angular.json`
+```json
+"serve": {
+    "builder": "ngx-build-plus:dev-server",
+        "configurations": {
+            "production": {
+                "browserTarget": "shell:build:production",
+                "extraWebpackConfig": "projects/shell/webpack.prod.config.js"
+            },
+            "development": {
+                "browserTarget": "shell:build:development",
+                "proxyConfig": "proxy.conf.json"
+            }
+        },
+```
+
+The modules and `shell` are now ready to be built and run as normal
+
+
 
 ## ✨Development
 
