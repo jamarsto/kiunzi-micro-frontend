@@ -41,16 +41,7 @@ Packages used and automatically added to the `package.json` of the angular works
 
 This library is intended to be used at the start of establishing a project as it updates configurations and generates additional code and configurations.  In short it builds the scaffolding.
 
-First, update the `tsconfig.json` to add the `resolveJsonModule` and `esModuleIterop` flags
-```json
-{
-  "compileOnSave": false,
-  "compilerOptions": {
-    "resolveJsonModule": true,
-    "esModuleInterop": true,
-```
-
-Next, build example application
+First, build the example application
 ```sh
 # Create your angular workspace
 ng new micro-frontend-workspace --create-application false
@@ -59,7 +50,7 @@ ng new micro-frontend-workspace --create-application false
 cd micro-frontend-workspace
 
 # Create the shared library
-ng generate library lib
+ng generate library --project lib
 
 # Create the shell
 ng generate application --no-routing --style sass --project shell
@@ -79,6 +70,15 @@ ng add @jamarsto/kiunzi-micro-frontend-tools --project mfe1 --type microfrontend
 ng add @jamarsto/kiunzi-micro-frontend-tools --project mfe2 --type microfrontend --port 8002 --library lib
 ```
 
+Next, update the `tsconfig.json` to add the `resolveJsonModule` and `esModuleInterop` flags
+```json
+{
+  "compileOnSave": false,
+  "compilerOptions": {
+    "resolveJsonModule": true,
+    "esModuleInterop": true,
+```
+
 Finally, make sure the library is linked locally so that it is exposed as an `npm` package to the build
 ```sh
 cd projects/lib
@@ -86,6 +86,7 @@ npm link
 cd ../..
 npm link lib
 ```
+
 You may need to restart your ide for the `tsconfig.json` and `npm link` changes to be picked up
 
 ## 📀Getting Started
